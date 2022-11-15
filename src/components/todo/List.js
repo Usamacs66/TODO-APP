@@ -14,7 +14,7 @@ const todos =
       : visibilityFilter === FILTERS.COMPLETED
       ? allTodos.filter(todo => todo.completed)
       : allTodos.filter(todo => !todo.completed);
-
+      
 return(
     
      <ul className="todo-list">

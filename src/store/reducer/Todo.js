@@ -17,6 +17,12 @@ export const Todo = (state={},action) =>{
           [id]: { ...currentTodo, completed: !currentTodo.completed }
         };
       }
+      case 'delete-todo': {
+        const {id} = action.payload;
+       let todos = Object.assign({},state);
+      delete todos[id];
+      return todos;
+      }
       default:
       return state;
     }

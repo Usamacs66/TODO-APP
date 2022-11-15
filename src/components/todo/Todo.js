@@ -1,10 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toggleTodo } from "../../store/action/toggleTodo";
-//import { deleteTodo } from "../../store/action/deleteTodo";
+import { deleteTodo } from "../../store/action/deleteTodo";
 
 const Todo = ({ todo }) => {
   const dispatch = useDispatch();
+  debugger;
   return (
     <>
     <li className="todo-item" onClick={() => dispatch(toggleTodo(todo.id))}>
@@ -13,7 +14,7 @@ const Todo = ({ todo }) => {
         {todo.content}
       </span>
     </li>
-    <button type="button" onClick={()=> console.log(todo.id)} >Delete todo</button>
+    <button type="button" onClick={()=>dispatch(deleteTodo(todo.id))} >Delete todo</button>
     </>
   );
 };
