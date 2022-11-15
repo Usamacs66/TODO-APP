@@ -5,7 +5,6 @@ import { deleteTodo } from "../../store/action/deleteTodo";
 
 const Todo = ({ todo }) => {
   const dispatch = useDispatch();
-  debugger;
   return (
     <>
     <li className="todo-item" onClick={() => dispatch(toggleTodo(todo.id))}>

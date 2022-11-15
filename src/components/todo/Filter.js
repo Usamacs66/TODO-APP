@@ -1,5 +1,4 @@
 import React from "react";
-//import cx from "classnames";
 import { useSelector, useDispatch } from "react-redux";
 import { setFilter } from "../../store/action/setFilter";
 import { FILTERS } from "../../constants";
