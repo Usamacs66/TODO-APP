@@ -16,14 +16,15 @@ const todos =
       : allTodos.filter(todo => !todo.completed);
       
 return(
-    
-     <ul className="todo-list">
-      {todos && todos.length
-        ? todos.map((todo, index) => {
-            return <Todo key={todo.id} todo={todo}/>;
-          })
-        : "No todos!"}
-    </ul>
+    <div className="list-wrapper mt-3">
+      <ul className="d-flex flex-column-reverse todo-list">
+        {todos && todos.length
+          ? todos.map((todo, index) => {
+              return <Todo key={todo.id} todo={todo}/>;
+            })
+          : "No todos!"}
+      </ul>
+    </div>
     
 )
 }

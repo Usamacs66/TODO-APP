@@ -8,12 +8,17 @@ const Todo = ({ todo }) => {
   return (
     <>
     <li className="todo-item" onClick={() => dispatch(toggleTodo(todo.id))}>
-      {todo && todo.completed ? "✅" : "🔴"}{" "}
-      <span>
-        {todo.content}
-      </span>
+      <div className="form-check w-100">
+        <label className="form-check-label">
+          <i className="input-helper"></i>
+          {todo && todo.completed ? "✅" : "🔴"}{" "}
+          <span>
+            {todo.content}
+          </span>
+        </label>
+        <button type="button" className="btn" onClick={()=>dispatch(deleteTodo(todo.id))} >Delete</button>
+      </div>
     </li>
-    <button type="button" onClick={()=>dispatch(deleteTodo(todo.id))} >Delete todo</button>
     </>
   );
 };

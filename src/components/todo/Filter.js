@@ -7,21 +7,23 @@ const Filter = () => {
   const activeFilter = useSelector(state => state.visibilityFilter);
   const dispatch = useDispatch();
   return (
-    <div className="visibility-filters">
-      {Object.keys(FILTERS).map(filterKey => {
-        const currentFilter = FILTERS[filterKey];
-        return (
-          <span
-            key={`visibility-filter-${currentFilter}`}
-            className=""
-            onClick={() => {
-              dispatch(setFilter(currentFilter));
-            }}
-          >
-            {currentFilter}
-          </span>
-        );
-      })}
+    <div className="controls">
+      <div className="filters">
+        {Object.keys(FILTERS).map(filterKey => {
+          const currentFilter = FILTERS[filterKey];
+          return (
+            <span
+              key={`visibility-filter-${currentFilter}`}
+              className=""
+              onClick={() => {
+                dispatch(setFilter(currentFilter));
+              }}
+            >
+              {currentFilter}
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 };
