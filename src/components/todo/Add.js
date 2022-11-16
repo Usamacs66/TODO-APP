@@ -11,8 +11,10 @@ const Add = (prop)=>{
     }
    return(
     <>
-       <input type='text' value={value} onChange={(e)=>setValue(e.target.value)} />
-       <input type='button' onClick={Add} value='Add TODO' />
+      <div className="add-items d-flex"> 
+         <input type="text" value={value} onChange={(e)=>setValue(e.target.value)} className="form-control todo-list-input" placeholder="What do you need to do today?" /> 
+         <button className="add btn btn-primary font-weight-bold todo-list-add-btn" onClick={Add}>Add</button> 
+      </div>
     </>
    )
 }
