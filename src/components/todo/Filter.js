@@ -14,7 +14,7 @@ const Filter = () => {
           return (
             <span
               key={`visibility-filter-${currentFilter}`}
-              className=""
+              className={currentFilter === activeFilter ? "slected-span":""}
               onClick={() => {
                 dispatch(setFilter(currentFilter));
               }}

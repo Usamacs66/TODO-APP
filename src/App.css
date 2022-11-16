@@ -145,3 +145,7 @@
   cursor: pointer;
   margin-bottom: 0;
 }
+.slected-span{
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
