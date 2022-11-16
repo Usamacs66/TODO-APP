@@ -7,9 +7,9 @@ const Todo = ({ todo }) => {
   const dispatch = useDispatch();
   return (
     <>
-    <li className="todo-item" onClick={() => dispatch(toggleTodo(todo.id))}>
+    <li className="todo-item">
       <div className="form-check w-100">
-        <label className="form-check-label">
+        <label className="form-check-label" onClick={() => dispatch(toggleTodo(todo.id))}>
           <i className="input-helper"></i>
           {todo && todo.completed ? "✅" : "🔴"}{" "}
           <span>
